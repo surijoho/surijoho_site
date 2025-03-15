@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎の数理情報部 - IT部門</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../images/background.png');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        /* ヘッダー */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(51, 51, 51, 0.8);
+            padding: 10px 20px;
+            color: white;
+            height: 80px;
+        }
+
+        .logo {
+            height: 100px; /* デフォルトサイズを少し小さめに */
+            cursor: pointer;
+            transition: height 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        nav ul li a:active {
+            transform: scale(1);
+        }
+
+        /* 活動（コンテンツ） */
+        .activity {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 900px;
+        }
+
+        .activity h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .activity p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* フッター */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        footer nav ul {
+            margin: 20px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer nav ul li {
+            margin: 5px 10px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        footer nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        /* レスポンシブデザインのためのメディアクエリ */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .logo {
+                height: 80px;
+                margin: 10px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .activity {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .activity h2 {
+                font-size: 24px;
+            }
+
+            .activity p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                height: 60px;
+            }
+
+            nav ul li a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .activity h2 {
+                font-size: 20px;
+            }
+
+            .activity p {
+                font-size: 14px;
+            }
+
+            footer nav ul li a {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../images/logo.png" alt="ロゴ" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../activity.html">活動</a></li>
+                <li><a href="../departments.html">部門</a></li>
+                <li><a href="../column.html">コラム</a></li>
+                <li><a href="../sns.html">SNS</a></li>
+                <li><a href="../hetare_robo.html">ヘタレロボ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="activity">
+        <h2>準備中…</h2>
+        <p>準備中…です</p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 謎の数理情報部. All Rights Reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../activity.html">活動</a></li>
+                    <li><a href="../departments.html">部門</a></li>
+                    <li><a href="../column.html">コラム</a></li>
+                    <li><a href="../sns.html">SNS</a></li>
+                    <li><a href="../hetare_robo.html">ヘタレロボ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

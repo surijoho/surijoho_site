@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部活サイト</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/background2.png');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        /* ヘッダー */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(51, 51, 51, 0.8);
+            padding: 10px 20px;
+            color: white;
+            height: 80px;
+        }
+
+        .logo {
+            height: 100px; /* デフォルトサイズを少し小さめに */
+            cursor: pointer;
+            transition: height 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        nav ul li a:active {
+            transform: scale(1);
+        }
+
+        /* コラム */
+        .column {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .column h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .column-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .column-article {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            width: 45%;
+            text-align: left;
+            min-width: 250px; /* 最小幅を指定 */
+        }
+
+        .column-article h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .column-article p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .column-article a {
+            color: lightblue;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .column-article a:hover {
+            text-decoration: underline;
+        }
+
+        .small-image {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* フッター */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        footer nav ul {
+            margin: 20px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer nav ul li {
+            margin: 5px 10px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        footer nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        /* レスポンシブデザインのためのメディアクエリ */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .logo {
+                height: 80px;
+                margin: 10px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .column {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .column h2 {
+                font-size: 24px;
+            }
+
+            .column-article {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .column-article h3 {
+                font-size: 20px;
+            }
+
+            .column-article p {
+                font-size: 16px;
+            }
+
+            .small-image {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                height: 60px;
+            }
+
+            nav ul li a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .column h2 {
+                font-size: 20px;
+            }
+
+            .column-article h3 {
+                font-size: 18px;
+            }
+
+            .column-article p {
+                font-size: 14px;
+            }
+
+            .column-article a {
+                font-size: 14px;
+            }
+
+            .small-image {
+                width: 60px;
+            }
+
+            footer nav ul li a {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="ロゴ" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="activity.html">活動</a></li>
+                <li><a href="departments.html">部門</a></li>
+                <li><a href="column.html">コラム</a></li>
+                <li><a href="sns.html">SNS</a></li>
+                <li><a href="hetare_robo.html">ヘタレロボ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="column" class="column">
+        <h2>コラム</h2>
+        <div class="column-container">
+            <article class="column-article">
+                <h3>サイトが完成しましたby昔街</h3>
+                <img src="images/image15.jpg" alt="サンプル画像" class="small-image">
+                <p>このコラムを読んでいるということはきっと今頃私は…</p>
+                <a href="clumn/column1.html">続きを読む</a>
+            </article>
+
+            <article class="column-article">
+                <h3>準備中…</h3>
+                <p>まだこのコラムは書かれていません…</p>
+                <a href="column/column2.html">続きを読む</a>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 謎の数理情報部. All Rights Reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#top">トップ</a></li>
+                    <li><a href="activity.html">活動</a></li>
+                    <li><a href="departments.html">部門</a></li>
+                    <li><a href="column.html">コラム</a></li>
+                    <li><a href="sns.html">SNS</a></li>
+                    <li><a href="hetare_robo.html">ヘタレロボ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
