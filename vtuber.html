@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>謎の数理情報部 - ゲーム制作部門</title>
+    <title>部活サイト</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('../images/background.png');
+            background-image: url('images/background3.png');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
@@ -63,26 +63,55 @@
             transform: scale(1);
         }
 
-        /* 活動（コンテンツ） */
-        .activity {
+        /* コンテンツ */
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 900px;
+            margin: 20px auto;
             background-color: rgba(0, 0, 0, 0.6);
             color: white;
             padding: 20px;
             border-radius: 15px;
+        }
+
+        .content img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .pdf-button {
+            display: block;
+            text-align: center;
             margin: 20px auto;
             max-width: 900px;
         }
 
-        .activity h2 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 20px;
+        .pdf-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 16px;
         }
 
-        .activity p {
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: center;
+        .pdf-button a:hover {
+            background-color: #cc5500;
         }
 
         /* フッター */
@@ -149,17 +178,28 @@
                 margin: 5px 0;
             }
 
-            .activity {
+            .content {
+                flex-direction: column;
+                text-align: center;
                 margin: 10px;
                 padding: 15px;
             }
 
-            .activity h2 {
+            .content img {
+                margin: 0 0 20px 0;
+                max-width: 150px;
+            }
+
+            .content h2 {
                 font-size: 24px;
             }
 
-            .activity p {
+            .content p {
                 font-size: 16px;
+            }
+
+            .pdf-button {
+                margin: 10px auto;
             }
         }
 
@@ -173,11 +213,20 @@
                 font-size: 12px;
             }
 
-            .activity h2 {
+            .content img {
+                max-width: 120px;
+            }
+
+            .content h2 {
                 font-size: 20px;
             }
 
-            .activity p {
+            .content p {
+                font-size: 14px;
+            }
+
+            .pdf-button a {
+                padding: 8px 15px;
                 font-size: 14px;
             }
 
@@ -190,25 +239,32 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../images/logo.png" alt="ロゴ" class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="ロゴ" class="logo">
         </a>
         <nav>
             <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../activity.html">活動</a></li>
-                <li><a href="../departments.html">部門</a></li>
-                <li><a href="../column.html">コラム</a></li>
-                <li><a href="../sns.html">SNS</a></li>
-                <li><a href="../hetare_robo.html">ヘタレロボ</a></li>
-                <li><a href="../vtuber">？？？</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="activity.html">活動</a></li>
+                <li><a href="departments.html">部門</a></li>
+                <li><a href="column.html">コラム</a></li>
+                <li><a href="sns.html">SNS</a></li>
+                <li><a href="hetare_robo.html">ヘタレロボ</a></li>
+                    <li><a href="vtuber">？？？</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="activity">
-        <h2>準備中…</h2>
-        <p>準備中…です</p>
+    <div class="content">
+        <img src="images/background3.png" alt="ヘタレロボ">
+        <div>
+            <h2>？？？</h2>
+            <p>coming soon...</p>
+        </div>
+    </div>
+
+    <div class="pdf-button">
+        <a href="pdfs/hetare_robo.pdf" target="_blank">DOWNLOAD　　</a>
     </div>
 
     <footer>
@@ -216,13 +272,13 @@
             <p>© 2025-2026 謎の数理情報部. All Rights Reserved.</p>
             <nav>
                 <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="../activity.html">活動</a></li>
-                    <li><a href="../departments.html">部門</a></li>
-                    <li><a href="../column.html">コラム</a></li>
-                    <li><a href="../sns.html">SNS</a></li>
-                    <li><a href="../hetare_robo.html">ヘタレロボ</a></li>
-                <li><a href="../vtuber">？？？</a></li>
+                    <li><a href="#top">トップ</a></li>
+                    <li><a href="activity.html">活動</a></li>
+                    <li><a href="departments.html">部門</a></li>
+                    <li><a href="column.html">コラム</a></li>
+                    <li><a href="sns.html">SNS</a></li>
+                    <li><a href="hetare_robo.html">ヘタレロボ</a></li>
+                    <li><a href="vtuber">？？？</a></li>
                 </ul>
             </nav>
         </div>
